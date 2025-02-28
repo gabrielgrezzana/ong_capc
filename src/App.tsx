@@ -2,6 +2,11 @@ import Home from "./pages/home/home";
 import Activit from "./pages/atividades/activitis";
 import Depoimentos from "./pages/depoimentos/depoimentos";
 import Moments from "./pages/moments/moments";
+import History from "./pages/history/history";
+import Mission from "./pages/mission/mission";
+import WhoIAm from "./pages/who/who";
+import Supplier from "./pages/supplier/supplier";
+import Redes from "./pages/redes/redes";
 import "./main.css";
 
 function App() {
@@ -11,6 +16,11 @@ function App() {
       <Activit />
       <Depoimentos />
       <Moments />
+      <History />
+      <Mission />
+      <WhoIAm />
+      <Supplier />
+      <Redes />
     </div>
   );
 }

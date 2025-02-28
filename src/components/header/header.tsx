@@ -1,4 +1,13 @@
 const Header = () => {
+  const style = {
+    button: {
+      margin: 15,
+      borderWidth: 0,
+      padding: 5,
+      borderRadius: 5,
+      backgroundColor: "#f36f21",
+    },
+  };
   return (
     <header
       className="header"
@@ -11,33 +20,20 @@ const Header = () => {
       }}
     >
       <nav className="nav">
-        <button
-          style={{
-            marginLeft: 5,
-            backgroundColor: "#F77C2C",
-            borderRadius: 3,
-            borderColor: "#F77C2C",
-          }}
-        >
+        <button style={style.button}>
           <text
             style={{
               color: "#fff",
               fontSize: 20,
               marginLeft: 5,
               marginRight: 5,
+              fontWeight: "bold",
             }}
           >
             Atividades
           </text>
         </button>
-        <button
-          style={{
-            marginLeft: 5,
-            backgroundColor: "#F77C2C",
-            borderRadius: 3,
-            borderColor: "#F77C2C",
-          }}
-        >
+        <button style={style.button}>
           <text
             style={{
               color: "#fff",
@@ -49,14 +45,7 @@ const Header = () => {
             Fornecedores
           </text>
         </button>
-        <button
-          style={{
-            marginLeft: 5,
-            backgroundColor: "#F77C2C",
-            borderRadius: 3,
-            borderColor: "#F77C2C",
-          }}
-        >
+        <button style={style.button}>
           <text
             style={{
               color: "#fff",
@@ -68,14 +57,7 @@ const Header = () => {
             Missão
           </text>
         </button>
-        <button
-          style={{
-            marginLeft: 5,
-            backgroundColor: "#F77C2C",
-            borderRadius: 3,
-            borderColor: "#F77C2C",
-          }}
-        >
+        <button style={style.button}>
           <text
             style={{
               color: "#fff",
@@ -87,14 +69,7 @@ const Header = () => {
             Fotos
           </text>
         </button>
-        <button
-          style={{
-            marginLeft: 5,
-            backgroundColor: "#F77C2C",
-            borderRadius: 3,
-            borderColor: "#F77C2C",
-          }}
-        >
+        <button style={style.button}>
           <text
             style={{
               color: "#fff",
@@ -106,14 +81,7 @@ const Header = () => {
             História
           </text>
         </button>
-        <button
-          style={{
-            marginLeft: 5,
-            backgroundColor: "#F77C2C",
-            borderRadius: 3,
-            borderColor: "#F77C2C",
-          }}
-        >
+        <button style={style.button}>
           <text
             style={{
               color: "#fff",
@@ -125,14 +93,7 @@ const Header = () => {
             Quem somos
           </text>
         </button>
-        <button
-          style={{
-            marginLeft: 5,
-            backgroundColor: "#F77C2C",
-            borderRadius: 3,
-            borderColor: "#F77C2C",
-          }}
-        >
+        <button style={style.button}>
           <text
             style={{
               color: "#fff",
@@ -144,14 +105,7 @@ const Header = () => {
             Redes
           </text>
         </button>
-        <button
-          style={{
-            marginLeft: 5,
-            backgroundColor: "#F77C2C",
-            borderRadius: 3,
-            borderColor: "#F77C2C",
-          }}
-        >
+        <button style={style.button}>
           <text
             style={{
               color: "#fff",
@@ -163,14 +117,7 @@ const Header = () => {
             Depoimentos
           </text>
         </button>
-        <button
-          style={{
-            marginLeft: 5,
-            backgroundColor: "#F77C2C",
-            borderRadius: 3,
-            borderColor: "#F77C2C",
-          }}
-        >
+        <button style={style.button}>
           <text
             style={{
               color: "#fff",

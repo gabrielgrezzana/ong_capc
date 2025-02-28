@@ -13,8 +13,38 @@ const Home = () => {
     >
       <div
         style={{
+          width: "300px",
+          height: "300px",
+          position: "absolute",
+          left: 0,
+          top: 40,
+        }}
+      >
+        <img
+          src={images.homemgif}
+          alt="homem"
+          style={{ width: "100%", height: "100%" }}
+        />
+      </div>
+      <div
+        style={{
+          width: "300px",
+          height: "300px",
+          position: "absolute",
+          right: 0,
+          top: 40,
+        }}
+      >
+        <img
+          src={images.mulhergif}
+          alt="homem"
+          style={{ width: "100%", height: "100%" }}
+        />
+      </div>
+      <div
+        style={{
           flex: 1,
-          backgroundColor: "#F77C2C",
+          backgroundColor: "#df8a27",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -63,7 +93,7 @@ const Home = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "orange",
+            backgroundColor: "#c9c9c9",
             borderRadius: 10,
           }}
         >

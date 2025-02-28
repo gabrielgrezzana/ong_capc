@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface TextProps {
   label?: string;
-  variant: "header" | "body" | "labelCard";
+  variant: "header" | "body" | "labelCard" | "history";
 }
 
 const variantStyles = {
@@ -27,9 +27,19 @@ const variantStyles = {
     marginBottom: "0px",
     as: "span",
   },
+  history: {
+    fontSize: "22px",
+    fontWeight: "600",
+    color: "#fff",
+    marginBottom: "0px",
+    as: "p",
+    alignText: "center",
+  },
 };
 
-const StyledText = styled.p<{ variant: "header" | "body" | "labelCard" }>`
+const StyledText = styled.p<{
+  variant: "header" | "body" | "labelCard" | "history";
+}>`
   font-size: ${({ variant }) => variantStyles[variant].fontSize};
   font-weight: ${({ variant }) => variantStyles[variant].fontWeight};
   color: ${({ variant }) => variantStyles[variant].color};
