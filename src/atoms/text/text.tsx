@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface TextProps {
   label?: string;
-  variant: "header" | "body" | "labelCard" | "history";
+  variant: "header" | "body" | "labelCard" | "history" | "iknow";
 }
 
 const variantStyles = {
@@ -35,10 +35,19 @@ const variantStyles = {
     as: "p",
     alignText: "center",
   },
+  iknow: {
+  textAlign: "center",
+  maxWidth: "60%", 
+  marginBottom: 40,
+  fontSize: "22px",
+  fontWeight: "600",
+  color: "#fff",
+  as: "h4",
+}
 };
 
 const StyledText = styled.p<{
-  variant: "header" | "body" | "labelCard" | "history";
+  variant: "header" | "body" | "labelCard" | "history" | "iknow";
 }>`
   font-size: ${({ variant }) => variantStyles[variant].fontSize};
   font-weight: ${({ variant }) => variantStyles[variant].fontWeight};
