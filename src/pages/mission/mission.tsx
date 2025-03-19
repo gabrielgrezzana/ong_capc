@@ -12,6 +12,7 @@ const Mission = () => {
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
+        marginTop:55,
       }}
     >
       <div style={{ width: "70%", height: "25%" }}>

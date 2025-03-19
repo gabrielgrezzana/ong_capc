@@ -27,13 +27,13 @@ const Supplier = () => {
         <Text
           variant="history"
           label="
-Auxílio Transporte Municipal (para atendimentos médicos, quimioterapia, participação em eventos, atividades e oficinas); 
-Atendimento Social e Psicológico; 
-Suplementos Alimentares (em caráter emergencial); 
-Leite; Cestas Básicas; Fraldas Geriátricas e infantis; Equipamentos para a utilização de Sondas (em caráter emergencial); 
-Medicações; (Com prescrição médica e que não sejam fornecidas pelo S.U.S. e/ou até a disponibilização do mesmos através do Cess);
- Repasse de roupas, calçados, móveis e utensílios doados pela sociedade;
- Empréstimo de cadeiras de rodas, muletas, andadores entre outros equipamentos hospitalares e domésticos para cuidados com a saúde; 
+Auxílio Transporte Municipal (para atendimentos médicos, quimioterapia, participação em eventos, atividades e oficinas).
+Atendimento Social e Psicológico.
+Suplementos Alimentares (em caráter emergencial).
+Leite; Cestas Básicas; Fraldas Geriátricas e infantis; Equipamentos para a utilização de Sondas (em caráter emergencial).
+Medicações. (Com prescrição médica e que não sejam fornecidas pelo S.U.S. e/ou até a disponibilização do mesmos através do Cess).
+ Repasse de roupas, calçados, móveis e utensílios doados pela sociedade.
+ Empréstimo de cadeiras de rodas, muletas, andadores entre outros equipamentos hospitalares e domésticos para cuidados com a saúde.
 "
         />
       </div>

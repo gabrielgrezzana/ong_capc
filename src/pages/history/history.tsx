@@ -16,7 +16,7 @@ const History = () => {
     >
       <h1
         style={{
-          color: "#F77C2C",
+          color: theme.colors.orangemain,
           marginLeft: 40,
           marginBottom: 25,
         }}

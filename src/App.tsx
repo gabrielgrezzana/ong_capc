@@ -6,7 +6,8 @@ import History from "./pages/history/history";
 import Mission from "./pages/mission/mission";
 import WhoIAm from "./pages/who/who";
 import Supplier from "./pages/supplier/supplier";
-import Redes from "./pages/redes/redes";
+import Footer from "./pages/footer/footer";
+
 import "./main.css";
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       <Mission />
       <WhoIAm />
       <Supplier />
-      <Redes />
+      <Footer />
     </div>
   );
 }
