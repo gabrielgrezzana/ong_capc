@@ -31,7 +31,7 @@ const Testimonials = ({ textToShow }: Props) => {
         style={{
           width: "100%",
           height: "50%",
-          objectFit: "contain",
+          objectFit: "contain",          
         }}
       />
       <div

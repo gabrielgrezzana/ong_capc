@@ -15,29 +15,39 @@ const Mission = () => {
         marginTop:55,
       }}
     >
-      <div style={{ width: "70%", height: "25%" }}>
+      <div style={{ width: "70%", height: "25%", textAlign:"center", display:"flex", alignItems:"cemter", justifyContent:"center", flexDirection:"column" }}>
         <p
           style={{
             color: "#F77C2C",
+            background:"#f0cbb2",
             marginLeft: 40,
             marginBottom: 25,
-            fontSize: 32,
+            fontSize: 42,
+            fontWeight:"bold",
+            padding:10,
+            borderRadius:15
           }}
         >
           Missão
         </p>
         <Text
           variant="history"
-          label="Nossa Missão é prestar auxílio às pessoas com câncer e seus familiares, proporcionando uma melhor qualidade de vida, resgatando sua autoestima, fortalecendo os vínculos familiares e sociais."
+          label="Nossa Missão é prestar auxílio às pessoas com câncer e seus familiares, proporcionando uma melhor qualidade de vida, resgatando sua autoestima, fortalecendo os vínculos familiares e sociais."
         />
       </div>
-      <div style={{ width: "70%", height: "25%" }}>
+      <div style={{ width: "70%", height: "25%", textAlign:"center", display:"flex", alignItems:"cemter", justifyContent:"center", flexDirection:"column" }}>
         <p
           style={{
             color: "#F77C2C",
+            background:"#f0cbb2",
             marginLeft: 40,
             marginBottom: 25,
-            fontSize: 32,
+            fontSize: 42,
+            fontWeight:"bold",
+            padding:10,
+            borderRadius:15,
+            
+            
           }}
         >
           Visão
@@ -47,13 +57,17 @@ const Mission = () => {
           label="Nossa Visão é Estimular a participação na vida pública, contribuir para a inserção, reinserção e permanência na sociedade."
         />
       </div>
-      <div style={{ width: "70%", height: "50%" }}>
+      <div style={{ width: "70%", height: "45%", textAlign:"center", display:"flex", alignItems:"cemter", justifyContent:"center", flexDirection:"column" }}>
         <p
           style={{
             color: "#F77C2C",
+            background:"#f0cbb2",
             marginLeft: 40,
             marginBottom: 25,
-            fontSize: 32,
+            fontSize: 42,
+            fontWeight:"bold",
+            padding:10,
+            borderRadius:15
           }}
         >
           Objetivo

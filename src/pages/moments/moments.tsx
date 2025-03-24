@@ -6,7 +6,7 @@ const Moments = () => {
     <div
       style={{
         width: "100vw",
-        height: "100vh",
+        height: "80vh",
         backgroundColor: theme.colors.background,
       }}
     >
@@ -23,9 +23,6 @@ const Moments = () => {
           gap: 25,
         }}
       >
-        <Photo_Moments />
-        <Photo_Moments />
-        <Photo_Moments />
         <Photo_Moments />
         <Photo_Moments />
         <Photo_Moments />

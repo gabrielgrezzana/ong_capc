@@ -6,20 +6,25 @@ const History = () => {
     <div
       style={{
         width: "100vw",
-        height: "70vh",
+        height: "100vh",
         backgroundColor: theme.colors.background,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
+        
       }}
     >
       <h1
         style={{
-          color: theme.colors.orangemain,
-          marginLeft: 40,
-          marginBottom: 25,
-        }}
+            color: "#F77C2C",
+            marginLeft: 40,
+            marginBottom: 25,
+            fontSize: 42,
+            fontWeight:"bold",
+            padding:10,
+            borderRadius:15
+          }}
       >
         História CAPC
       </h1>
