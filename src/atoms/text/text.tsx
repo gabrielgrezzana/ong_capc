@@ -28,7 +28,7 @@ const variantStyles = {
     as: "span",
   },
   history: {
-    fontSize: "24px",
+    fontSize: "32px",
     fontWeight: "600",
     color: "#fff",
     marginBottom: "0px",

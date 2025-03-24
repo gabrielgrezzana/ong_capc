@@ -9,6 +9,8 @@ const Footer = () => {
     <div style={{
       width:"100%",
       height:"35vh",
+      minHeight:"500px",
+      maxHeight:"500px",
       backgroundColor: theme.colors.orangemain,
       display:"flex",
       alignItems:"center",
@@ -24,41 +26,62 @@ const Footer = () => {
           flexDirection:"column",
           gap:15
         }}>
-          <div style={{
+          <a 
+          target="_blank"
+          href="https://www.facebook.com/capc.com.br"
+          style={{
             display:"flex",
             flexDirection:"row",
             alignItems:"center",
-            gap:20
-          }}>
-          <FaFacebook size={60} />
-          <Text variant="iknow" label="capc.facebook.com" />
-          </div>
-          <div style={{
+            gap:20,
+            textDecoration: "none", // Remove o sublinhado
+            color: "inherit", // Herda a cor do texto do elemento pai
+            cursor: "pointer" // Mantém o comportamento de clique sem parecer um link
+          }} >
+            
+            <FaFacebook size={60} />
+            <Text variant="iknow" label="capc.facebook.com" />
+            
+          </a>
+          <a 
+          target="_blank"
+          href="https://www.facebook.com/capc.com.br"
+          style={{
             display:"flex",
             flexDirection:"row",
             alignItems:"center",
-            gap:20
+            gap:20,
+            textDecoration: "none", // Remove o sublinhado
+            color: "inherit", // Herda a cor do texto do elemento pai
+            cursor: "pointer" // Mantém o comportamento de clique sem parecer um link
           }}>
-          <FaInstagram size={60} />
-          <Text variant="iknow" label="insta.capc.com" />
-          </div>
-          <div style={{
+            <FaInstagram size={60} />
+            <Text variant="iknow" label="insta.capc.com" />
+          </a>
+          <a 
+          target="_blank"
+          href="https://www.facebook.com/capc.com.br"
+          style={{
             display:"flex",
             flexDirection:"row",
             alignItems:"center",
-            gap:20
+            gap:20,
+            textDecoration: "none", // Remove o sublinhado
+            color: "inherit", // Herda a cor do texto do elemento pai
+            cursor: "pointer" // Mantém o comportamento de clique sem parecer um link
           }}>
-          <FaWhatsapp size={60} />
-          <Text variant="iknow" label="(54) 9 9915-7599" />
-          </div>
-          <div style={{
+            <FaWhatsapp size={60} />
+            <Text variant="iknow" label="(54) 9 9915-7599" />
+          </a>
+          <div         
+          style={{
             display:"flex",
             flexDirection:"row",
             alignItems:"center",
-            gap:20
+            gap:20,            
           }}>
-          <FaPix size={60} />
-          <Text variant="iknow" label="TALTALTALTALTAL" />
+            <FaPix size={60} />
+            <Text variant="iknow" label="TALTALTALTALTAL" />
           </div>                    
           <Text variant="iknow" label="2025 CAPC. Todos os direitos reservados" />
         </div>                
