@@ -106,8 +106,7 @@ const Moments = () => {
       {/* Carrossel - Container principal */}
       <div
         style={{
-          width: "100%",
-          maxWidth: "1400px",
+          width: "95%",          
           position: "relative",
           padding: "0 60px",
         }}

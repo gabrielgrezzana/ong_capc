@@ -1,22 +1,45 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Home from "./pages/home/home";
 import Activit from "./pages/atividades/activitis";
 import Depoimentos from "./pages/depoimentos/depoimentos";
 import Footer from "./pages/footer/footer";
+import History from "./pages/history/history";
+import Mission from "./pages/mission/mission";
+import Moments from "./pages/moments/moments";
+import WhoIAm from "./pages/who/who";
+import Supplier from "./pages/supplier/supplier";
+
 
 function App() {
-  return (
+    return (
     <BrowserRouter>
-      <div className="app-container">
-        {/* Adicione o Header se necessário */}
-
+      <div className="app-container">                
         <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/atividades" element={<Activit />} />
-            <Route path="/depoimentos" element={<Depoimentos />} />
-            {/* Adicione outras rotas aqui */}
-          </Routes>
+          <section id="home">
+            <Home />
+          </section>
+          <section id="atividades">
+            <Activit />
+          </section>
+          <section id="depoimentos">
+            <Depoimentos />
+          </section>
+          <section id="historia">
+            <History />
+          </section>
+          <section id="missao">
+            <Mission />
+          </section>
+          <section id="momentos">
+            <Moments />
+          </section>
+          <section id="quem-somos">
+            <WhoIAm />
+          </section>
+          <section id="fornecedores">
+            <Supplier />
+          </section>
+          
         </main>
 
         <Footer />

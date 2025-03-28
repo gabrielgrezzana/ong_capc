@@ -80,24 +80,15 @@ const Depoimentos = () => {
         }}
       >
         <Testimonials
-          textToShow="A equipe do CAPC transformou completamente nossa abordagem de inclusão. O trabalho desenvolvido foi fundamental para melhorar a qualidade de vida dos nossos alunos. A dedicação e profissionalismo são incomparáveis."
-          author="Maria Silva"
-          role="Diretora Escolar"
-          rating={5}
+          textToShow="A equipe do CAPC transformou completamente nossa abordagem de inclusão. O trabalho desenvolvido foi fundamental para melhorar a qualidade de vida dos nossos alunos. A dedicação e profissionalismo são incomparáveis."                              
         />
 
         <Testimonials
-          textToShow="Como mãe de uma criança com necessidades especiais, posso dizer que o CAPC fez toda a diferença no desenvolvimento do meu filho. A evolução que observamos em poucos meses foi surpreendente. Recomendo a todos!"
-          author="Ana Oliveira"
-          role="Mãe"
-          rating={5}
+          textToShow="Como mãe de uma criança com necessidades especiais, posso dizer que o CAPC fez toda a diferença no desenvolvimento do meu filho. A evolução que observamos em poucos meses foi surpreendente. Recomendo a todos!"                              
         />
 
         <Testimonials
-          textToShow="O trabalho do CAPC é essencial para nossa comunidade. Eles trazem não apenas conhecimento técnico, mas também um olhar humano e sensível para cada caso. Parceria fundamental para nossa instituição."
-          author="Carlos Mendes"
-          role="Coordenador Pedagógico"
-          rating={4}
+          textToShow="O trabalho do CAPC é essencial para nossa comunidade. Eles trazem não apenas conhecimento técnico, mas também um olhar humano e sensível para cada caso. Parceria fundamental para nossa instituição."                              
         />
       </div>
 

@@ -25,7 +25,7 @@ const Home = () => {
     <div
       style={{
         backgroundColor: "#f8f8f8",
-        minHeight: "100vh",
+        minHeight: "80vh",
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -220,20 +220,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Rodapé */}
-      <div
-        style={{
-          backgroundColor: "#222",
-          color: "#fff",
-          padding: "20px",
-          textAlign: "center",
-          fontSize: "0.9rem",
-        }}
-      >
-        © {new Date().getFullYear()} CAPC - Todos os direitos reservados
-      </div>
+      </div>    
+    
     </div>
   );
 };
