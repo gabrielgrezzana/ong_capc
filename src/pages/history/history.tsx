@@ -5,30 +5,74 @@ const History = () => {
   return (
     <div
       style={{
-        width: "100vw",
-        height: "100vh",
+        width: "100%",
+        minHeight: "100vh",
         backgroundColor: theme.colors.background,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
-        
+        padding: "60px 20px",
+        boxSizing: "border-box",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
+      {/* Elemento decorativo */}
+      <div
+        style={{
+          position: "absolute",
+          top: "-100px",
+          right: "-100px",
+          width: "300px",
+          height: "300px",
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(247,124,44,0.1) 0%, transparent 70%)",
+          zIndex: 0,
+        }}
+      ></div>
+
+      {/* Título estilizado */}
       <h1
         style={{
-            color: "#F77C2C",
-            marginLeft: 40,
-            marginBottom: 25,
-            fontSize: 42,
-            fontWeight:"bold",
-            padding:10,
-            borderRadius:15
-          }}
+          color: "#F77C2C",
+          fontSize: "2.8rem",
+          fontWeight: 700,
+          margin: "0 0 40px 0",
+          position: "relative",
+          textAlign: "center",
+          paddingBottom: "15px",
+        }}
       >
         História CAPC
+        <span
+          style={{
+            position: "absolute",
+            bottom: "0",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "100px",
+            height: "4px",
+            backgroundColor: "#F77C2C",
+            borderRadius: "2px",
+          }}
+        ></span>
       </h1>
-      <div style={{ width: "70%", height: "60%" }}>
+
+      {/* Container do texto com sombra */}
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "800px",
+          backgroundColor: "white",
+          borderRadius: "12px",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+          padding: "40px",
+          position: "relative",
+          zIndex: 1,
+        }}
+      >
         <Text
           variant="history"
           label="O Centro de Auxílio às Pessoas com Câncer é uma entidade civil, sem
@@ -55,6 +99,21 @@ const History = () => {
           município."
         />
       </div>
+
+      {/* Elemento decorativo inferior */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "-150px",
+          left: "-150px",
+          width: "400px",
+          height: "400px",
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(44,124,247,0.05) 0%, transparent 70%)",
+          zIndex: 0,
+        }}
+      ></div>
     </div>
   );
 };

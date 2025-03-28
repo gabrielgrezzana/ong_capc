@@ -28,22 +28,24 @@ const variantStyles = {
     as: "span",
   },
   history: {
-    fontSize: "32px",
     fontWeight: "600",
-    color: "#fff",
     marginBottom: "0px",
     as: "p",
-    alignText: "center",    
+    alignText: "center",
+    fontSize: "1.1rem",
+    lineHeight: "1.8",
+    color: "#555",
+    textAlign: "justify",
   },
   iknow: {
-  textAlign: "center",
-  maxWidth: "60%", 
-  marginBottom: 40,
-  fontSize: "24px",
-  fontWeight: "600",
-  color: "#fff",
-  as: "h4",
-}
+    textAlign: "center",
+    maxWidth: "60%",
+    marginBottom: 40,
+    fontSize: "24px",
+    fontWeight: "600",
+    color: "#fff",
+    as: "h4",
+  },
 };
 
 const StyledText = styled.p<{
