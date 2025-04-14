@@ -3,21 +3,55 @@ import theme from "../../theme/theme";
 import Photo_Moments from "../../components/cards/card_just_photo/photo_moments";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-// Dados de exemplo - substitua pelas suas fotos reais
-const fotosMomentos = [
-  { id: 1, image: "url_foto1", alt: "Atividade com crianças" },
-  { id: 2, image: "url_foto2", alt: "Workshop educacional" },
-  { id: 3, image: "url_foto3", alt: "Evento de inclusão" },
-  { id: 4, image: "url_foto4", alt: "Sessão de terapia" },
-  { id: 5, image: "url_foto5", alt: "Atividade ao ar livre" },
-  { id: 6, image: "url_foto6", alt: "Palestra para pais" },
-  { id: 7, image: "url_foto7", alt: "Atividade em grupo" },
-  { id: 8, image: "url_foto8", alt: "Celebração de resultados" },
-];
+// Dados de exemplo - estruturados por ano
+const fotosPorAno = {
+  2014: [
+    { id: 1, image: "https://as1.ftcdn.net/jpg/12/94/25/98/1000_F_1294259821_jJBsvwbFPzM7FZWKX1sBjyPlDXyRXneI.jpg", alt: "Atividade com crianças 2014" },
+    { id: 2, image: "url_foto2_2014", alt: "Workshop educacional 2014" },
+    { id: 3, image: "url_foto3_2014", alt: "Evento de inclusão 2014" },
+    { id: 1, image: "url_foto1_2014", alt: "Atividade com crianças 2014" },
+    { id: 2, image: "url_foto2_2014", alt: "Workshop educacional 2014" },
+    { id: 3, image: "url_foto3_2014", alt: "Evento de inclusão 2014" },
+    { id: 1, image: "url_foto1_2014", alt: "Atividade com crianças 2014" },
+    { id: 2, image: "url_foto2_2014", alt: "Workshop educacional 2014" },
+    { id: 3, image: "url_foto3_2014", alt: "Evento de inclusão 2014" },
+  ],
+  2015: [
+    { id: 4, image: "url_foto1_2015", alt: "Sessão de terapia 2015" },
+    { id: 5, image: "url_foto2_2015", alt: "Atividade ao ar livre 2015" },
+    { id: 6, image: "url_foto3_2015", alt: "Palestra para pais 2015" },
+  ],
+  2016: [
+    { id: 7, image: "url_foto1_2016", alt: "Atividade em grupo 2016" },
+    { id: 8, image: "url_foto2_2016", alt: "Celebração de resultados 2016" },
+    { id: 9, image: "url_foto3_2016", alt: "Reunião da equipe 2016" },
+  ],
+  2017: [
+    { id: 10, image: "url_foto1_2017", alt: "Festa anual 2017" },
+    { id: 11, image: "url_foto2_2017", alt: "Treinamento de voluntários 2017" },
+    { id: 12, image: "url_foto3_2017", alt: "Passeio educativo 2017" },
+  ],
+  2018: [
+    { id: 13, image: "url_foto1_2018", alt: "Oficina criativa 2018" },
+    { id: 14, image: "url_foto2_2018", alt: "Evento de arrecadação 2018" },
+    { id: 15, image: "url_foto3_2018", alt: "Encontro de famílias 2018" },
+  ],
+  2019: [
+    { id: 16, image: "url_foto1_2019", alt: "Atendimento especial 2019" },
+    { id: 17, image: "url_foto2_2019", alt: "Formatura do projeto 2019" },
+    { id: 18, image: "url_foto3_2019", alt: "Confraternização 2019" },
+  ],
+};
+
+const anos = [2014, 2015, 2016, 2017, 2018, 2019];
 
 const Moments = () => {
+  const [anoSelecionado, setAnoSelecionado] = useState<number>(2019); // O ano mais recente como padrão
   const [currentIndex, setCurrentIndex] = useState(0);
   const photosPerPage = 3;
+
+  // Obtém as fotos do ano selecionado
+  const fotosMomentos = fotosPorAno[anoSelecionado];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -34,6 +68,11 @@ const Moments = () => {
           (fotosMomentos.length % photosPerPage || photosPerPage)
         : prevIndex - photosPerPage
     );
+  };
+
+  const handleAnoChange = (ano) => {
+    setAnoSelecionado(ano);
+    setCurrentIndex(0); // Resetar para a primeira página ao mudar o ano
   };
 
   const visiblePhotos = fotosMomentos.slice(
@@ -55,15 +94,53 @@ const Moments = () => {
         position: "relative",
       }}
     >
-      {/* Título estilizado */}
+      {/* Título estilizado com seletor de ano */}
       <div
         style={{
           width: "100%",
           maxWidth: "1400px",
           marginBottom: "40px",
           textAlign: "center",
+          position: "relative", // Para posicionar o seletor absolutamente em relação a este container
         }}
       >
+        {/* Seletor de Ano */}
+        <div
+          style={{
+            position: "absolute",
+            right: "20px",
+            top: "10px",
+            zIndex: 20,
+          }}
+        >
+          <select
+            value={anoSelecionado}
+            onChange={(e) => handleAnoChange(Number(e.target.value))}
+            style={{
+              padding: "8px 15px",
+              borderRadius: "8px",
+              border: "2px solid #F77C2C",
+              backgroundColor: "white",
+              color: "#333",
+              fontWeight: "bold",
+              cursor: "pointer",
+              outline: "none",
+              boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
+              appearance: "none", // Remove o estilo padrão de select em alguns navegadores
+              backgroundImage: "url('data:image/svg+xml;utf8,<svg fill=\"%23F77C2C\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 10l5 5 5-5z\"/><path d=\"M0 0h24v24H0z\" fill=\"none\"/></svg>')",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "right 10px center",
+              paddingRight: "30px", // Espaço para o ícone
+            }}
+          >
+            {anos.map((ano) => (
+              <option key={ano} value={ano}>
+                {ano}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <h1
           style={{
             color: "#F77C2C",
@@ -99,7 +176,7 @@ const Moments = () => {
             lineHeight: 1.6,
           }}
         >
-          Registros especiais dos nossos melhores momentos e atividades
+          Registros especiais dos nossos melhores momentos e atividades de {anoSelecionado}
         </p>
       </div>
 
