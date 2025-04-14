@@ -5,43 +5,43 @@ const Activit = () => {
   // Dados simulados das atividades (substitua pelos dados reais)
   const atividades = [
     {
-      image: "url_imagem_1",
+      image: "https://i.imgur.com/z4GpgRh.jpg",
       title: "Oficina de Inclusão",
       description:
         "Atividades práticas para promover a inclusão social de pessoas com deficiência.",
       backgroundColor: "#F77C2C",
     },
-    {
-      image: "url_imagem_2",
-      title: "Workshop Educacional",
-      description: "Capacitação para educadores sobre metodologias inclusivas.",
-      backgroundColor: "#2C8BF7",
-    },
-    {
-      image: "url_imagem_3",
-      title: "Terapia Ocupacional",
-      description:
-        "Sessões semanais para desenvolvimento de habilidades motoras.",
-      backgroundColor: "#2CF7A0",
-    },
-    {
-      image: "url_imagem_4",
-      title: "Atividades Lúdicas",
-      description: "Jogos e brincadeiras para desenvolvimento cognitivo.",
-      backgroundColor: "#F7C42C",
-    },
-    {
-      image: "url_imagem_5",
-      title: "Apoio Psicológico",
-      description: "Atendimento individualizado para crianças e familiares.",
-      backgroundColor: "#A02CF7",
-    },
-    {
-      image: "url_imagem_6",
-      title: "Eventos Culturais",
-      description: "Participação em eventos para integração com a comunidade.",
-      backgroundColor: "#F72C8B",
-    },
+    // {
+    //   image: "url_imagem_2",
+    //   title: "Workshop Educacional",
+    //   description: "Capacitação para educadores sobre metodologias inclusivas.",
+    //   backgroundColor: "#2C8BF7",
+    // },
+    // {
+    //   image: "url_imagem_3",
+    //   title: "Terapia Ocupacional",
+    //   description:
+    //     "Sessões semanais para desenvolvimento de habilidades motoras.",
+    //   backgroundColor: "#2CF7A0",
+    // },
+    // {
+    //   image: "url_imagem_4",
+    //   title: "Atividades Lúdicas",
+    //   description: "Jogos e brincadeiras para desenvolvimento cognitivo.",
+    //   backgroundColor: "#F7C42C",
+    // },
+    // {
+    //   image: "url_imagem_5",
+    //   title: "Apoio Psicológico",
+    //   description: "Atendimento individualizado para crianças e familiares.",
+    //   backgroundColor: "#A02CF7",
+    // },
+    // {
+    //   image: "url_imagem_6",
+    //   title: "Eventos Culturais",
+    //   description: "Participação em eventos para integração com a comunidade.",
+    //   backgroundColor: "#F72C8B",
+    // },
   ];
 
   return (
