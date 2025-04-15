@@ -59,7 +59,7 @@ const Footer = () => {
           </a>
           <a 
           target="_blank"
-          href="https://www.facebook.com/CapcCxs"
+          href="https://www.instagram.com/capc.cxs/"
           style={{
             display:"flex",
             flexDirection:"row",
@@ -74,8 +74,7 @@ const Footer = () => {
           </a>
           <a 
           onClick={() => handleOpenWhatsApp()}
-          target="_blank"
-          href="https://www.instagram.com/capc.cxs/"
+          target="_blank"          
           style={{
             display:"flex",
             flexDirection:"row",
