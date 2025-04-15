@@ -1,7 +1,13 @@
 import { useState } from "react";
 
-const Photo_Moments = ({
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+interface PhotoMomentsProps {
+  image: string;
+  altText?: string; 
+  style?: React.CSSProperties;
+  onClick?: () => void;
+}
+
+const Photo_Moments: React.FC<PhotoMomentsProps> = ({
   image,
   altText = "Momento CAPC",
   style = {},
