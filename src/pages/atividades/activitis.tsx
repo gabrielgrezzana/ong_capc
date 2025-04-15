@@ -3,46 +3,52 @@ import theme from "../../theme/theme";
 
 const Activit = () => {
   // Dados simulados das atividades (substitua pelos dados reais)
-  const atividades = [
-    {
-      image: "https://i.imgur.com/z4GpgRh.jpg",
-      title: "Oficina de Inclusão",
-      description:
-        "Atividades práticas para promover a inclusão social de pessoas com deficiência.",
-      backgroundColor: "#F77C2C",
-    },
-    // {
-    //   image: "url_imagem_2",
-    //   title: "Workshop Educacional",
-    //   description: "Capacitação para educadores sobre metodologias inclusivas.",
-    //   backgroundColor: "#2C8BF7",
-    // },
-    // {
-    //   image: "url_imagem_3",
-    //   title: "Terapia Ocupacional",
-    //   description:
-    //     "Sessões semanais para desenvolvimento de habilidades motoras.",
-    //   backgroundColor: "#2CF7A0",
-    // },
-    // {
-    //   image: "url_imagem_4",
-    //   title: "Atividades Lúdicas",
-    //   description: "Jogos e brincadeiras para desenvolvimento cognitivo.",
-    //   backgroundColor: "#F7C42C",
-    // },
-    // {
-    //   image: "url_imagem_5",
-    //   title: "Apoio Psicológico",
-    //   description: "Atendimento individualizado para crianças e familiares.",
-    //   backgroundColor: "#A02CF7",
-    // },
-    // {
-    //   image: "url_imagem_6",
-    //   title: "Eventos Culturais",
-    //   description: "Participação em eventos para integração com a comunidade.",
-    //   backgroundColor: "#F72C8B",
-    // },
-  ];
+ const atividades = [
+  {
+    image: "https://i.imgur.com/z4GpgRh.jpg",
+    title: "Doação de cestas básicas",
+    description:
+      "Fornecimento de alimentos essenciais para pacientes oncológicos e suas famílias em situação de vulnerabilidade social.",
+    backgroundColor: "#F77C2C",
+  },
+  {
+    image: "https://i.imgur.com/3PFQjW5.jpg",
+    title: "Fornecimento de leite e suplementos alimentares",
+    description: "Apoio nutricional emergencial para complementar a dieta de pacientes em tratamento contra o câncer.",
+    backgroundColor: "#2C8BF7",
+  },
+  {
+    image: "https://i.imgur.com/jDwLUJ4.jpg",
+    title: "Doação de fraldas geriátricas e infantis",
+    description:
+      "Distribuição gratuita de fraldas para pacientes com necessidades especiais, contribuindo para o conforto e dignidade.",
+    backgroundColor: "#2CF7A0",
+  },
+  {
+    image: "https://i.imgur.com/OSkPR8m.jpg",
+    title: "Fornecimento de medicações (não disponíveis pelo SUS)",
+    description: "Auxílio na obtenção de medicamentos prescritos que não são fornecidos pelo sistema público de saúde.",
+    backgroundColor: "#F7C42C",
+  },
+  {
+    image: "https://i.imgur.com/MDkqwCi.jpg",
+    title: "Auxílio transporte para tratamentos médicos",
+    description: "Suporte logístico para deslocamento de pacientes para consultas, exames e sessões de quimioterapia.",
+    backgroundColor: "#A02CF7",
+  },
+  {
+    image: "https://i.imgur.com/z4GpgRh.jpg",
+    title: "Empréstimo de equipamentos hospitalares",
+    description: "Disponibilização de cadeiras de rodas, muletas, andadores e outros equipamentos necessários para cuidados domiciliares.",
+    backgroundColor: "#F72C8B",
+  },
+  {
+    image: "https://i.imgur.com/ohGFHcQ.jpg",
+    title: "Atendimento social e psicológico",
+    description: "Suporte emocional e orientação profissional para pacientes e familiares durante o tratamento oncológico.",
+    backgroundColor: "#2CF7E0",
+  },
+];
 
   return (
     <section
