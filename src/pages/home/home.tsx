@@ -7,10 +7,13 @@ const Home = () => {
 
   // Avisos dinâmicos (pode ser substituído por chamada API)
   const notices = [
-    "Próximo evento beneficente: Dia 25/11 às 14h na sede do CAPC",
-    "Campanha do agasalho: Estamos arrecadando cobertores para o inverno",
-    "Inscrições abertas para novas oficinas de arteterapia",
-    "Precisamos de voluntários para nosso telemarketing solidário",
+     `Nesta Páscoa, a CAPC celebra junto com você o renascer da esperança e o florescer da vida. 
+          Que este período de renovação traga força, fé e novos caminhos para todos que fazem parte 
+          da nossa comunidade. Continuamos juntos nesta jornada, compartilhando amor e cuidado.`
+    // "Próximo evento beneficente: Dia 25/11 às 14h na sede do CAPC",
+    // "Campanha do agasalho: Estamos arrecadando cobertores para o inverno",
+    // "Inscrições abertas para novas oficinas de arteterapia",
+    // "Precisamos de voluntários para nosso telemarketing solidário",
   ];
 
   // Rotação automática dos avisos
@@ -41,7 +44,7 @@ const Home = () => {
         style={{
           backgroundColor: "#F77C2C",
           width: "100%",
-          minHeight: "70vh",
+          minHeight: "50vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
