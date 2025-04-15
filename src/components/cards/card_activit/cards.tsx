@@ -22,10 +22,7 @@ const Card = ({
         display: "flex",
         flexDirection: "column",
         margin: "15px",
-        ":hover": {
-          transform: "translateY(-5px)",
-          boxShadow: "0 8px 16px rgba(0,0,0,0.2)",
-        },
+       
       }}
     >
       <div
@@ -43,9 +40,7 @@ const Card = ({
             height: "100%",
             objectFit: "cover",
             transition: "transform 0.5s ease",
-            ":hover": {
-              transform: "scale(1.05)",
-            },
+           
           }}
         />
       </div>
@@ -63,21 +58,12 @@ const Card = ({
         <Text
           label={title}
           variant="labelCard"
-          style={{
-            fontSize: "18px",
-            fontWeight: "600",
-            marginBottom: "12px",
-            lineHeight: "1.3",
-          }}
+          
         />
         <Text
           label={description}
           variant="labelCard"
-          style={{
-            fontSize: "14px",
-            lineHeight: "1.5",
-            opacity: 0.9,
-          }}
+          
         />
       </div>
     </div>
