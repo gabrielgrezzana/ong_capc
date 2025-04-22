@@ -19,88 +19,134 @@ const Footer = () => {
       window.open(url, '_blank', 'noopener,noreferrer');
     }
   };
+  
   return (
-    <div style={{
-      width:"100%",
-      height:"35vh",
-      minHeight:"500px",
-      maxHeight:"500px",
-      backgroundColor: theme.colors.orangemain,
-      display:"flex",
-      alignItems:"center",
-      justifyContent:"center",      
-    }}>
+    <div
+      style={{
+        width: "100%",
+        height: "20vh",
+        minHeight: "350px",
+        maxHeight: "350px",
+        backgroundColor: theme.colors.orangemain,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "90%",
+          maxWidth: "1200px",
+          gap: 40,
+        }}
+      >
         <img
           src={images.homemgif}
           alt="homem"
-          style={{ width: "15%"  , height: "80%", margin:100 }}
+          style={{
+            width: "10%",
+            height: "60%",
+            minWidth: "120px",
+            objectFit: "contain",
+          }}
         />
-        <div style={{
-          display:"flex",
-          flexDirection:"column",
-          gap:15
-        }}>
-          <a 
-          target="_blank"
-          href="https://www.facebook.com/capc.com.br"
+
+        <div
           style={{
-            display:"flex",
-            flexDirection:"row",
-            alignItems:"center",
-            gap:20,
-            textDecoration: "none", // Remove o sublinhado
-            color: "inherit", // Herda a cor do texto do elemento pai
-            cursor: "pointer" // Mantém o comportamento de clique sem parecer um link
-          }} >
+            display: "flex",
+            flexDirection: "column",
+            gap: 10,
+            alignItems: "center",            
             
-            <FaFacebook size={60} />
-            <Text variant="iknow" label="facebook/capc" />
-            
-          </a>
-          <a 
-          target="_blank"
-          href="https://www.instagram.com/capc.cxs/"
-          style={{
-            display:"flex",
-            flexDirection:"row",
-            alignItems:"center",
-            gap:20,
-            textDecoration: "none", // Remove o sublinhado
-            color: "inherit", // Herda a cor do texto do elemento pai
-            cursor: "pointer" // Mantém o comportamento de clique sem parecer um link
-          }}>
-            <FaInstagram size={60} />
-            <Text variant="iknow" label="insta.capc.com" />
-          </a>
-          <a 
-          onClick={() => handleOpenWhatsApp()}
-          target="_blank"          
-          style={{
-            display:"flex",
-            flexDirection:"row",
-            alignItems:"center",
-            gap:20,
-            textDecoration: "none", // Remove o sublinhado
-            color: "inherit", // Herda a cor do texto do elemento pai
-            cursor: "pointer" // Mantém o comportamento de clique sem parecer um link
-          }}>
-            <FaWhatsapp size={60} />
-            <Text variant="iknow" label="(54) 8126-4699" />
-          </a>
-          <div         
-          style={{
-            display:"flex",
-            flexDirection:"row",
-            alignItems:"center",
-            gap:20,            
-          }}>
-            <FaPix size={60} />
-            <Text variant="iknow" label="15 381 705 0001 73" />
-          </div>                    
-          <Text variant="iknow" label="2025 CAPC. Todos os direitos reservados" />
-        </div>                
+          }}
+        >
+          <Text variant="iknow" label="Acompanhe nosso trabalho:" />
+          <div style={{ display: "flex", flexDirection: "row", gap: 20 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/CapcCxs"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: 15,
+                  textDecoration: "none",
+                  color: "inherit",
+                  cursor: "pointer",
+                }}
+              >
+                <FaFacebook size={45} />
+                <Text variant="iknow" label="facebook/capc" />
+              </a>
+
+              <a
+                target="_blank"
+                href="https://www.instagram.com/capc.cxs/"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: 15,
+                  textDecoration: "none",
+                  color: "inherit",
+                  cursor: "pointer",
+                }}
+              >
+                <FaInstagram size={45} />
+                <Text variant="iknow" label="insta.capc.com" />
+              </a>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+              <a
+                onClick={() => handleOpenWhatsApp()}
+                target="_blank"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: 15,
+                  textDecoration: "none",
+                  color: "inherit",
+                  cursor: "pointer",
+                }}
+              >
+                <FaWhatsapp size={45} />
+                <Text variant="iknow" label="(54) 8126-4699" />
+              </a>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  gap: 15,
+                }}
+              >
+                <FaPix size={45} />
+                <Text variant="iknow" label="15 381 705 0001 73" />
+              </div>
+            </div>
+          </div>
+          <div style={{}}>
+            <Text 
+            variant="labelCard" 
+            label="© 2025 Todos os direitos reservados a CAPC - Centro de Auxílio as Pessoas com Câncer."            
+            />
+            <div style={{width:"100%", display:"flex", justifyContent:"center", marginTop:10}}>
+              <img src={images.LOGO_LARANJA} style={{width:"80px", height:"80px"}}/>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
+
+
 
 export default Footer;
