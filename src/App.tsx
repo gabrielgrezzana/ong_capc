@@ -8,6 +8,7 @@ import Mission from "./pages/mission/mission";
 import Moments from "./pages/moments/moments";
 import WhoIAm from "./pages/who/who";
 import Supplier from "./pages/supplier/supplier";
+import Cancer from "./pages/cancer/cancer";
 
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
           </section>
           <section id="fornecedores">
             <Supplier />
+          </section>
+          <section id="cancer">
+            <Cancer />
           </section>
           
         </main>

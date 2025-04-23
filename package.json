@@ -13,6 +13,7 @@
     "@react-navigation/core": "^7.7.0",
     "@styled-system/css": "^5.1.5",
     "@types/styled-system__css": "^5.0.21",
+    "firebase": "^11.6.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.5.0",

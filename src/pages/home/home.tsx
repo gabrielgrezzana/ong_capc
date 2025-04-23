@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import images from "../../assets";
 import Header from "../../components/header/header";
+//import Notice from "../not/notice"
 
 const Home = () => {
   const [currentNotice, setCurrentNotice] = useState(0);
@@ -10,10 +11,6 @@ const Home = () => {
      `Nesta Páscoa, a CAPC celebra junto com você o renascer da esperança e o florescer da vida. 
           Que este período de renovação traga força, fé e novos caminhos para todos que fazem parte 
           da nossa comunidade. Continuamos juntos nesta jornada, compartilhando amor e cuidado.`
-    // "Próximo evento beneficente: Dia 25/11 às 14h na sede do CAPC",
-    // "Campanha do agasalho: Estamos arrecadando cobertores para o inverno",
-    // "Inscrições abertas para novas oficinas de arteterapia",
-    // "Precisamos de voluntários para nosso telemarketing solidário",
   ];
 
   // Rotação automática dos avisos
@@ -194,6 +191,7 @@ const Home = () => {
                 lineHeight: 1.6,
               }}
             >
+              {/* <Notice className="teste"/> */}
               {notices[currentNotice]}
             </p>
 

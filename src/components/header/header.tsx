@@ -72,9 +72,9 @@ const Header = () => {
         <button style={styles.button} onClick={() => scrollToSection("fornecedores")}>
           Oque Fornecemos
         </button>
-        {/* <button style={styles.button} onClick={() => scrollToSection("fornecedores")}>
-          Como nos ajudar
-        </button> */}
+        <button style={styles.button} onClick={() => scrollToSection("cancer")}>
+          Cancêr
+        </button>
        
       </nav>
     </header>
