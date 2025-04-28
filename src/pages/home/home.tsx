@@ -1,31 +1,57 @@
-import { useState, useEffect } from "react";
-import images from "../../assets";
-import Header from "../../components/header/header";
-//import Notice from "../not/notice"
+import  { useState, useEffect } from 'react';
+// import { getMessages } from '../path/to/firebaseConfig'; // Ajuste o caminho conforme a estrutura do seu projeto
+// import Header from '../components/Header'; // Importe o componente Header
+// import images from '../constants/images'; // Importe suas imagens
+import { getMessages } from '../../database/firebaseConfig';
+import Header from '../../components/header/header';
+import images from '../../assets';
 
 const Home = () => {
   const [currentNotice, setCurrentNotice] = useState(0);
+  // Mensagem padrão como estado inicial
+  const [notices, setNotices] = useState([
+    `Nesta Páscoa, a CAPC celebra junto com você o renascer da esperança e o florescer da vida. 
+    Que este período de renovação traga força, fé e novos caminhos para todos que fazem parte 
+    da nossa comunidade. Continuamos juntos nesta jornada, compartilhando amor e cuidado.`
+  ]);
+  const [loading, setLoading] = useState(true);
 
-  // Avisos dinâmicos (pode ser substituído por chamada API)
-  const notices = [
-     `Nesta Páscoa, a CAPC celebra junto com você o renascer da esperança e o florescer da vida. 
-          Que este período de renovação traga força, fé e novos caminhos para todos que fazem parte 
-          da nossa comunidade. Continuamos juntos nesta jornada, compartilhando amor e cuidado.`
-  ];
+  // Efeito para carregar as mensagens do Firestore ao montar o componente
+  useEffect(() => {
+    const fetchMessages = async () => {
+      try {
+        setLoading(true);
+        const messages = await getMessages(); // Usar a nova função getMessages
+        
+        if (messages.length > 0) {
+          setNotices(messages); // Substituir completamente o array de notices
+        }
+      } catch (error) {
+        console.error("Erro ao buscar mensagens:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMessages();
+  }, []); // Executa apenas na montagem do componente
 
   // Rotação automática dos avisos
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentNotice((prev) => (prev + 1) % notices.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    // Só inicia a rotação se tiver mais de uma mensagem
+    if (notices.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentNotice((prev) => (prev + 1) % notices.length);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [notices]); // Depende do array de notices
 
   return (
     <div
       style={{
         backgroundColor: "#f8f8f8",
-        minHeight: "80vh",
+        minHeight: "60vh",
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -138,18 +164,20 @@ const Home = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          
         }}
       >
         <div
           style={{
             width: "100%",
-            maxWidth: "1000px",
+            maxWidth: "50%",
             backgroundColor: "#fff",
             borderRadius: "12px",
             padding: "30px",
             boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
             position: "relative",
             minHeight: "200px",
+            maxHeight:"100%",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -165,6 +193,7 @@ const Home = () => {
               backgroundColor: "#F77C2C",
               borderTopLeftRadius: "12px",
               borderTopRightRadius: "12px",
+              
             }}
           ></div>
 
@@ -184,16 +213,19 @@ const Home = () => {
               Avisos e Notícias
             </h2>
 
-            <p
-              style={{
-                fontSize: "1.2rem",
-                color: "#333",
-                lineHeight: 1.6,
-              }}
-            >
-              {/* <Notice className="teste"/> */}
-              {notices[currentNotice]}
-            </p>
+            {loading ? (
+              <p style={{ fontSize: "1.2rem", color: "#333" }}>Carregando avisos...</p>
+            ) : (
+              <p
+                style={{
+                  fontSize: "1.2rem",
+                  color: "#333",
+                  lineHeight: 1.6,
+                }}
+              >
+                {notices[currentNotice]}
+              </p>
+            )}
 
             <div
               style={{
@@ -222,7 +254,6 @@ const Home = () => {
           </div>
         </div>
       </div>    
-    
     </div>
   );
 };
