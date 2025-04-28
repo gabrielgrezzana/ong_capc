@@ -1,12 +1,12 @@
-import images from "../../../assets";
 import theme from "../../../theme/theme";
 import Text from "../../../atoms/text/text";
 
 interface Props {
   textToShow: string;
+  img: string;
 }
 
-const Testimonials = ({ textToShow }: Props) => {
+const Testimonials = ({ textToShow, img }: Props) => {
   return (
     <div
       style={{
@@ -26,7 +26,7 @@ const Testimonials = ({ textToShow }: Props) => {
       }}
     >
       <img
-        src={images.LOGO_LARANJA}
+        src={img}
         alt="foto_depoimento"
         style={{
           width: "100%",
