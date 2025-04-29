@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/home/home";
 import Activit from "./pages/atividades/activitis";
@@ -12,6 +13,7 @@ import Cancer from "./pages/cancer/cancer";
 // Importe o componente AdminPanel existente
 //import AdminPanel from "./pages/adm/adm_notices";
 import AdminPage from "./pages/adm/adm_page";
+import Donation from "./pages/donation/donation.tsx";
 
 function App() {
   return (
@@ -58,6 +60,7 @@ function App() {
         
         {/* Rota para a área administrativa */}
         <Route path="/adm" element={<AdminPage />} />
+        <Route path="/donate" element={<Donation />} />
         
         {/* Rota para redirecionar qualquer caminho inválido para a página inicial */}
         <Route path="*" element={<Navigate to="/" replace />} />
