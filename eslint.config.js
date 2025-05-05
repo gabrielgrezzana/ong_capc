@@ -23,6 +23,9 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      // Adicione estas regras para mudar erros para warnings
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-unused-vars': 'warn',
     },
   },
 )

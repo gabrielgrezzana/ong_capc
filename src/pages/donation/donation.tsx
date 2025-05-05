@@ -1,10 +1,66 @@
 import theme from "../../theme/theme";
 import { useState, useEffect } from "react";
 
+ const styles = {
+    modalOverlay: {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 1000
+    },
+    modalContent: {
+      backgroundColor: 'white',
+      borderRadius: '8px',
+      width: '80%',
+      maxWidth: '800px',
+      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+    },
+    modalHeader: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '16px',
+      borderBottom: '1px solid #eee'
+    },
+    closeButton: {
+      background: 'none',
+      border: 'none',
+      fontSize: '24px',
+      cursor: 'pointer'
+    },
+    modalBody: {
+      padding: '20px',
+      display: 'flex',
+      flexDirection: 'row'
+    },
+    qrcodeContainer: {
+      flex: 1,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      paddingRight: '20px'
+    },
+    qrcodeImg: {
+      maxWidth: '100%',
+      height: 'auto'
+    },
+    textContainer: {
+      flex: 1,
+      paddingLeft: '20px',
+      borderLeft: '1px solid #eee'
+    }
+  };
 const Donation = () => {
 
   const [animationStarted, setAnimationStarted] = useState(false);
   const [showContent, setShowContent] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);  
 
      useEffect(() => {
     // Wait 200ms before starting the animation
@@ -25,11 +81,19 @@ const Donation = () => {
     };
   }, []);
 
+  
+
+   const handleModalDonate = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  
+
   return (
     <section
       style={{
         width: "100%",
-        minHeight: "120vh",
+        minHeight: "140vh",
         backgroundColor: theme.colors.background,
         padding: "80px 20px",
         boxSizing: "border-box",
@@ -97,6 +161,37 @@ const Donation = () => {
       </div>
 
 
+{isModalOpen && (
+  <div style={styles.modalOverlay} onClick={handleModalDonate}>
+    <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+      <div style={styles.modalHeader}>
+        <h2 style={{color: '#333', margin: 0}}>Faça sua doação</h2>
+        <button style={styles.closeButton} onClick={handleModalDonate}>×</button>
+      </div>
+      <div style={styles.modalBody}>
+        <div style={styles.qrcodeContainer}>
+          {/* Substitua pelo caminho do seu QR code */}
+          <img 
+            src="https://i.imgur.com/example-qrcode.png" 
+            alt="QR Code para doação" 
+            style={styles.qrcodeImg} 
+          />
+        </div>
+        <div style={styles.textContainer}>
+          <h3 style={{color: '#333', marginTop: 0}}>Como fazer sua doação</h3>
+          <p style={{color: '#333'}}>Escaneie o QR code ao lado para fazer sua doação. Sua contribuição é muito importante para nós.</p>
+          <p style={{color: '#333'}}>Você também pode fazer uma transferência bancária usando os dados abaixo:</p>
+          <ul style={{color: '#333'}}>
+            <li>Banco: Exemplo</li>
+            <li>Agência: 0000</li>
+            <li>Conta: 00000-0</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+)}  
+
       {/* Container dos cards */}
       <div
         style={{
@@ -153,6 +248,7 @@ const Donation = () => {
             }}
             onMouseOver={(e) => {e.currentTarget.style.backgroundColor = "#e66a1e"}}
             onMouseOut={(e) => {e.currentTarget.style.backgroundColor = "#F77C2C"}}
+            onClick={() => handleModalDonate()}
           >
             Fazer Doação
           </button>
@@ -180,7 +276,7 @@ const Donation = () => {
           <h2 style={{ color: "#F77C2C", fontSize: "1.8rem", marginBottom: "15px", alignSelf: "center" }}>
             Nossa Missão
           </h2>
-          <div style={{ color: "#555", textAlign: "left", marginBottom: "20px", fontSize: "0.95rem", lineHeight: "1.5" }}>
+          <div style={{ color: "#555", textAlign: "left", marginBottom: "20px", fontSize: "1.25rem", lineHeight: "1.5" }}>
             <p style={{ marginBottom: "10px" }}>
               Não sei se você sabe, mas <strong>enfrentar um câncer é sempre muito difícil e dolorido.</strong>
             </p>
@@ -217,7 +313,7 @@ const Donation = () => {
               e.currentTarget.style.color = "#F77C2C";
             }}
           >
-            Saiba Mais
+            Doar
           </button>
         </div>
       </div>
@@ -236,6 +332,8 @@ const Donation = () => {
           zIndex: 0,
         }}
       ></div>
+      {/* Modal que aparece condicionalmente */}
+      
     </section>
   );
 };
